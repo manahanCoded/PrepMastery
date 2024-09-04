@@ -1,4 +1,3 @@
-import MaxWidthWrapper from "./MaxWidthWrapper";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import {
@@ -15,8 +14,11 @@ import {
   faRectangleList,
 } from "@fortawesome/free-regular-svg-icons";
 
+
 //file Imports
 import Task from "@/components/dashboard/taskInfo/Task";
+import MaxWidthWrapper from "./MaxWidthWrapper";
+import MultiFileDropzoneUsage from "./fileUpload/fileUpload";
 
 export default async function ChangeContent() {
   return (
@@ -156,9 +158,9 @@ export default async function ChangeContent() {
                 <h3>Select Note</h3>
                 <h3>Select File</h3>
               </div>
-              <div>
+              <div className="">
                 <h3>Upload File</h3>
-                <div>File Attachment</div>
+                <MultiFileDropzoneUsage/>
               </div>
               <div>
                 <h3>Time Line of Preparation</h3>
