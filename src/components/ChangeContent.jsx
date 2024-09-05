@@ -18,7 +18,8 @@ import {
 //file Imports
 import Task from "@/components/dashboard/taskInfo/Task";
 import MaxWidthWrapper from "./MaxWidthWrapper";
-import MultiFileDropzoneUsage from "./fileUpload/fileUpload";
+import MultiFileDropzoneUsage from "./dashboard/fileUpload/fileUpload";
+import DateManager from "./dashboard/dateManager/dateManager"
 
 export default async function ChangeContent() {
   return (
@@ -27,28 +28,28 @@ export default async function ChangeContent() {
         <div className="min-w-44 bg-white px-5 rounded-md min-h-fit mr-2 hidden md:block ">
           <div className="h-full">
             <div className="border-b-2 mb-2 flex flex-col ">
-              <a className="py-4 flex items-center">
+              <a className="py-4 flex items-center hover:border-b-2 ">
                 <FontAwesomeIcon
                   icon={faTableColumns}
                   style={{ width: "1.25rem", marginRight: "0.375rem" }}
                 />
                 Dashboard
               </a>
-              <a className="py-4 flex items-center">
+              <a className="py-4 flex items-center hover:border-b-2 ">
                 <FontAwesomeIcon
                   icon={faEnvelope}
                   style={{ width: "1.25rem", marginRight: "0.375rem" }}
                 />
                 Emails
               </a>
-              <a className="py-4 flex items-center">
+              <a className="py-4 flex items-center hover:border-b-2 ">
                 <FontAwesomeIcon
                   icon={faChartLine}
                   style={{ width: "1.25rem", marginRight: "0.375rem" }}
                 />
                 Activities
               </a>
-              <a className="py-4 flex items-center">
+              <a className="py-4 flex items-center hover:border-b-2 ">
                 <FontAwesomeIcon
                   icon={faEnvelope}
                   style={{ width: "1.25rem", marginRight: "0.375rem" }}
@@ -57,21 +58,21 @@ export default async function ChangeContent() {
               </a>
             </div>
             <div className="border-b-2 mb-2 flex flex-col mt-5">
-              <a className="py-4 flex items-center">
+              <a className="py-4 flex items-center hover:border-b-2 ">
                 <FontAwesomeIcon
                   icon={faRectangleList}
                   style={{ width: "1.25rem", marginRight: "0.375rem" }}
                 />
                 Task
               </a>
-              <a className="py-4 flex items-center">
+              <a className="py-4 flex items-center hover:border-b-2 ">
                 <FontAwesomeIcon
                   icon={faCheckDouble}
                   style={{ width: "1.25rem", marginRight: "0.375rem" }}
                 />
                 Progress
               </a>
-              <a className="py-4 flex items-center">
+              <a className="py-4 flex items-center hover:border-b-2 ">
                 <FontAwesomeIcon
                   icon={faClockRotateLeft}
                   style={{ width: "1.25rem", marginRight: "0.375rem" }}
@@ -80,21 +81,21 @@ export default async function ChangeContent() {
               </a>
             </div>
             <div className="mb-2 flex flex-col mt-5">
-              <a className="py-4 flex items-center">
+              <a className="py-4 flex items-center hover:border-b-2 ">
                 <FontAwesomeIcon
                   icon={faGear}
                   style={{ width: "1.25rem", marginRight: "0.375rem" }}
                 />
                 Settings
               </a>
-              <a className="py-4 flex items-center">
+              <a className="py-4 flex items-center hover:border-b-2 ">
                 <FontAwesomeIcon
                   icon={faCircleQuestion}
                   style={{ width: "1.25rem", marginRight: "0.375rem" }}
                 />
                 Help
               </a>
-              <a className="py-4 flex items-center">
+              <a className="py-4 flex items-center hover:border-b-2 ">
                 <FontAwesomeIcon
                   icon={faArrowRightFromBracket}
                   style={{ width: "1.25rem", marginRight: "0.375rem" }}
@@ -163,8 +164,7 @@ export default async function ChangeContent() {
                 <MultiFileDropzoneUsage/>
               </div>
               <div>
-                <h3>Time Line of Preparation</h3>
-                <div>File Attachment</div>
+                <DateManager/>
               </div>
             </div>
           </div>
